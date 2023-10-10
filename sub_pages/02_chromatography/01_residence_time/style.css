@@ -1,0 +1,113 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    /* text-align: center; */
+}
+
+body {
+    padding: 50px 200px;
+
+}
+
+.instructions {
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.instructions h1 {
+    font-size: 2rem;
+    color: #005190;
+}
+
+#calculator {
+    border: 1px solid black;
+    background-color: #fafafa;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+}
+
+#calculator .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 20px 0; */
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+#calculator .row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+#calculator .row .check_label input {
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+#calculator .row input[type="number"] {
+    padding: 10px;
+    width: 150px;
+}
+
+.button_section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+    text-align: center;
+    color: white;
+
+}
+
+.button_section button:hover {
+    cursor: pointer;
+
+}
+
+#reset {
+    background-color: red;
+}
+
+#calculate {
+    background-color: blue;
+}
+
+/* media queries */
+
+@media (max-width: 800px) {
+    body {
+        padding: 50px;
+    }
+
+    .instructions,
+    #calcuator {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #calculator .row input[type="number"] {
+        padding: 10px;
+        width: 75px;
+    }
+
+    .button_section button {
+        padding: 5px 10px;
+
+        border-radius: 5px;
+        width: 100px;
+
+
+    }
+}

@@ -1,0 +1,136 @@
+body {
+    /* background-color: #add8e6; */
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #f3f3f3; */
+}
+
+h1 {
+    /* color: black; */
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading-section {
+    max-width: 600px;
+    color: #005190;
+}
+
+.form-card {
+    /* min-width: 600px;
+    max-width: 600px; */
+    max-width: 600px;
+    padding: 20px 50px;
+    border: 2px solid #005190;
+    border-radius: 10px;
+    /* background-color: #f4f4f4; */
+    box-sizing: border-box;
+    background-color: #f3f6fb;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.form-block {
+    margin: 20px 0;
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-block p,
+.form-block .inline-label {
+    width: 50px;
+}
+
+
+.form-block .input-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.form-block .input-block input {
+    /* margin-top: 10px; */
+    width: 100px;
+    border: 1px solid #005190;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+}
+
+.form-block .input-block select {
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #005190;
+    height: 40px;
+    text-align: center;
+    width: 80px;
+}
+
+.button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 80%;
+
+}
+
+.button-block button {
+    box-sizing: border-box;
+    min-width: 150px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 0 10px;
+
+
+}
+
+.button-block button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.button-block #calculate {
+    background-color: green;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.button-block #reset {
+    background-color: #f52509;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.answer {
+    min-height: 30px;
+}
+
+.answer_span {
+    font-weight: bold;
+    text-decoration: underline;
+    color: green;
+}
