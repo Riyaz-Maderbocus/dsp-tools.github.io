@@ -41,7 +41,7 @@ a {
 /* main section */
 
 .main {
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .main .main-header {
@@ -68,12 +68,13 @@ a {
     padding: 0 0 0.5em;
     border-bottom: 2px solid var(--primary-color);
     font-size: 1.2rem;
+    margin: 0 1rem 0 0;
 }
 
 .topic-section .go-up {
     color: #ffffff;
     font-size: 0.75rem;
-    margin: 0 0 0 1rem;
+
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     border-radius: 20px;
@@ -86,11 +87,11 @@ a {
 
 /* cards styling */
 .topic-section .cards-container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+    justify-content: center;
 
 
 }
@@ -110,7 +111,7 @@ a {
 
 .cards-container .card {
     margin: 1.5rem;
-    width: 280px;
+    max-width: 250px;
     min-height: 300px;
     padding: 1em;
     border: 1px solid var(--primary-color);
@@ -155,4 +156,30 @@ a {
 /* card icons */
 .cards-container .card .card-icon {
     font-size: 4rem;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+    .topic-section .topic-section-header {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cards-container .card {
+        box-shadow: none;
+        margin: 1rem 0.5rem;
+    }
+
+    /* .card {
+        margin: 0.5rem;
+    } */
+}
+
+@media only screen and (max-width: 500px) {
+    .topic-section .topic-header {
+        margin: 1rem auto;
+        display: block;
+        width: fit-content;
+    }
 }
