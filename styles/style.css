@@ -156,3 +156,31 @@ a {
 .cards-container .card .card-icon {
     font-size: 4rem;
 }
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 0.5rem 0.1rem;
+    }
+
+    .topic-section .cards-container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .topic-section .topic-header {
+        margin-left: 10px;
+    }
+
+    .cards-container .card {
+        margin: 0.75rem 0;
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+}
