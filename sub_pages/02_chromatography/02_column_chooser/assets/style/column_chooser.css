@@ -224,7 +224,7 @@ h2 {
     /* top: 0vh; */
     /* left: 50%; */
     z-index: 5;
-    /* min-height: 100vh; */
+    max-height: 100vh;
     min-width: 60vw;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -235,7 +235,7 @@ h2 {
     /* width: 600px; */
     /* max-width: 600px; */
     /* height: 50vh; */
-    min-height: 100vh;
+    /* min-height: 20vh; */
     visibility: visible;
     position: fixed;
     top: 0;
@@ -289,10 +289,10 @@ h2 {
     margin: 0 auto;
 }
 
-/* .columns-section .column-card.expanded .single-column-selection {
+.columns-section .column-card.expanded .single-column-selection {
     display: block;
 
-} */
+}
 
 /* ============= */
 
