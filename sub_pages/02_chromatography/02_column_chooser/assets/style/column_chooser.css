@@ -235,7 +235,7 @@ h2 {
     /* width: 600px; */
     /* max-width: 600px; */
     /* height: 50vh; */
-    height: 100vh;
+    min-height: 100vh;
     visibility: visible;
     position: fixed;
     top: 0;
