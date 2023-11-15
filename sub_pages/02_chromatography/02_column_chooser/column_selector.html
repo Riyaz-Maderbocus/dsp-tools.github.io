@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Column Selector Tool</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style/column_chooser.css">
+    </head>
+
+    <body>
+        <h1 id="h1">Column selector tool</h1>
+        <h2>This tool gives you choices of columns to use depending on bed height or volume of resin</h2>
+
+        <div class="description">
+            <ul>
+                <li>In the selection box below, tick one of the boxes for volume or bed height modes</li>
+                <li>In volume mode, the tool will take your volume of resin and work out the bed height for all the
+                    columns</li>
+                <li>In bed height mode, the tool will work out the volume of resin for each column</li>
+                <li>Unsuitable columns will be grayed out, but can still be accessed</li>
+                <li>Click on a column image to open it up and get a tool to fine tune your parameters</li>
+            </ul>
+
+        </div>
+
+
+        <div class="mode-selection">
+            <h3>Choose which mode you need and input your volume into the box</h3>
+            <div class="selection-section">
+                <div class="volume-selection-section selector-div">
+                    <div class="label-input">
+                        <input type="radio" name="mode" id="volume-mode" checked>
+                        <label for="volume-mode">Use resin volume mode (mL)</label>
+                    </div>
+                    <input type="number" name="resin-volume" id="resin-volume" class="number-input">
+                </div>
+                <div class="bedh-selection-section selector-div">
+                    <div class="label-input">
+                        <input type="radio" name="mode" id="bedh-mode">
+                        <label for="bedh-mode">Use bed height mode (cm)</label>
+                    </div>
+                    <input type="number" name="bed-height" id="bedh-height" class="number-input" step="0.1">
+                </div>
+                <div class="button-section selector-div">
+                    <button id="reset-button" class="mode-button">Reset</button>
+                    <button id="calculate-button" class="mode-button">Calculate</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns-section">
+            <!-- <div class="column-card" id="hiscale_16_20">
+                <div class="column-header">
+                    <p class="column-title">HiScale</p>
+                </div>
+
+                <div class="img-div">
+                    <img src="assets/img/hiscale_stock.png" alt="" class="column-img">
+                </div>
+                <div class="single-column-selection">
+                    <div class="mode-selection">
+                        <h3>Choose which mode you need and input your volume into the box</h3>
+                        <div class="selection-section">
+                            <div class="volume-selection-section selector-div">
+                                <div class="label-input">
+                                    <input type="radio" name="mode" id="single-vol-mode" checked>
+                                    <label for="single-vol-mode">Use resin volume mode (mL)</label>
+                                </div>
+                                <input type="number" name="resin-volume" class="number-input" id="single-resin-volume">
+                            </div>
+                            <div class="bedh-selection-section selector-div">
+                                <div class="label-input">
+                                    <input type="radio" name="mode" id="single-bedh-mode">
+                                    <label for="single-bedh-mode">Use bed height mode (cm)</label>
+                                </div>
+                                <input type="number" name="bed-height" id="single-bedh-height" class="number-input">
+                            </div>
+                            <div class="button-section selector-div">
+                                <button id="single-reset-button" class="mode-button">Reset</button>
+                                <button id="single-calculate-button" class="mode-button">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="column-stats">
+
+                    <p class="stats-p radius">Radius (mm): <span>50</span></p>
+                    <p class="stats-p diameter">Diameter (mm): <span>50</span></p>
+                    <p class="stats-p max-vol">Max Volume (mL): <span>50</span></p>
+                    <p class="stats-p max-height">Max Bed Height (cm): <span>50</span></p>
+                    <p class="stats-p calculated-volume">Calculated Volume (mL): <span></span></p>
+                    <p class="stats-p calcuated-height">Calculated Height (cm): <span></span></p>
+
+                </div>
+
+                <div class="close-button">
+                    <div class="lines"></div>
+                </div>
+            </div> -->
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="assets/js/column_chooser.js"></script>
+    </body>
+
+</html>

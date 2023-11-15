@@ -1,0 +1,25 @@
+constructor(html_id, name, img_src, inner diameter (mm), minVol, maxVol, minHeight, maxHeight)
+
+Adapter XK26 (adaptor don't do)
+axichrom 100/300
+axichrom 100/500
+axiChrom 140/300
+axichrom 200/300
+axichrom 70/300
+BPG 140/950
+GE RK 16/26
+GE XK 16/100 (16mm,  68 )
+GE XK 16/70
+GE XK 26
+GE XK 26/40
+GE XK 26/60
+GE XK 26/70
+GE XK 50/20
+HiPrep 26/10 (desalting)
+HiScale 16/20
+HiScale 16/40
+HiScale 26/40
+HiScale 50/20
+HiScale 50/40
+Millipore Vantage L
+Omnifit (don't know what size)

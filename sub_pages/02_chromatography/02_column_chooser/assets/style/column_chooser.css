@@ -1,0 +1,392 @@
+:root {
+    /* colors */
+    --primary-color: #005190;
+
+    /* sizes */
+    --standard-width: 1080px;
+}
+
+
+/* utility classes */
+
+.green-text {
+    color: rgb(23, 183, 23);
+    font-weight: bold;
+}
+
+.red-text {
+    color: red;
+    font-weight: bold;
+}
+
+.greyed-out {
+    opacity: 0.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* position: relative; */
+}
+
+h1 {
+    color: var(--primary-color);
+    max-width: var(--standard-width);
+    text-align: center;
+    margin: 2rem auto;
+}
+
+h2 {
+    max-width: var(--standard-width);
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+}
+
+.description {
+    max-width: var(--standard-width);
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.description ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Mode selection box */
+.mode-selection {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0.75rem 1rem;
+    background-color: #f7f6f6;
+}
+
+.mode-selection h3 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.mode-selection .selection-section {
+    margin: 1rem 0;
+}
+
+.mode-selection .selection-section .selector-div {
+    min-height: 35px;
+    margin: 0.75rem auto;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mode-selection .selection-section .selector-div .number-input {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.mode-selection .selection-section .button-section {
+    margin: 1rem auto;
+}
+
+.mode-selection .selection-section .button-section .mode-button {
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #fff;
+    background-color: none;
+}
+
+.mode-selection .selection-section .button-section #reset-button,
+.column-card .single-column-selection .button-section #single-reset-button {
+    background-color: red;
+}
+
+.mode-selection .selection-section .button-section #calculate-button,
+.column-card .single-column-selection .button-section #single-calculate-button {
+    background-color: rgb(33, 191, 33);
+}
+
+.mode-selection .selection-section .button-section #reset-button:hover,
+.mode-selection .selection-section .button-section #calculate-button:hover,
+.column-card .single-column-selection .button-section #single-reset-button:hover,
+.column-card .single-column-selection .button-section #single-calculate-button:hover {
+    cursor: pointer;
+}
+
+/* columns section */
+
+.columns-section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+/* column cards */
+
+.columns-section .column-card {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 300px;
+    /* padding: 0.5rem 0.75rem; */
+    margin: 1rem 0.5rem;
+    /* min-height: 600px; */
+    /* position: relative; */
+}
+
+.columns-section .column-card:hover {
+    cursor: pointer;
+}
+
+.columns-section .column-card .column-header {
+    background-color: var(--primary-color);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns-section .column-card .column-title {
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.columns-section .column-card .img-div {
+    height: 250px;
+}
+
+.columns-section .column-card .img-div .column-img {
+    margin: 0 auto;
+    padding: 0 10%;
+    max-width: 100%;
+    /* text-align: center; */
+    display: block;
+    max-height: 100%;
+}
+
+.columns-section .column-card .column-stats {
+    padding: 0.75rem;
+}
+
+.columns-section .column-card .column-stats .stats-p {
+    position: relative;
+}
+
+.columns-section .column-card .column-stats .stats-p span {
+    position: absolute;
+    right: 1px;
+}
+
+
+
+/* single column selector */
+.columns-section .column-card .single-column-selection {
+    display: none;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: grey; */
+}
+
+/* add hide class to the column section */
+.hide {
+    visibility: hidden;
+}
+
+/* add expanded class to your specific column card */
+.columns-section .column-card.expanded {
+    /* display: block; */
+    /* opacity: 1; */
+    /* position: absolute; */
+    /* top: 0vh; */
+    /* left: 50%; */
+    z-index: 5;
+    /* min-height: 100vh; */
+    min-width: 60vw;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    margin: 0 auto;
+    /* width: 600px; */
+    /* max-width: 600px; */
+    /* height: 50vh; */
+    height: 100vh;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+/* space out single radio button */
+.column-card.expanded .single-radio-button {
+    margin-right: 20px;
+}
+
+/* disable main scrollbar add to body */
+.disable-main-scroll {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+
+/* disable class for rest of cards when selected */
+.disable-card {
+    pointer-events: none;
+    /* display: none; */
+}
+
+
+.columns-section .column-card.expanded::-webkit-scrollbar {
+    display: none;
+}
+
+.columns-section .column-card.expanded .single-column-selection {
+    display: block;
+}
+
+
+.columns-section .column-card.expanded:hover {
+    cursor: default;
+}
+
+.columns-section .column-card.expanded .img-div {
+    display: none;
+
+}
+
+.columns-section .column-card.expanded .column-stats {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* .columns-section .column-card.expanded .single-column-selection {
+    display: block;
+
+} */
+
+/* ============= */
+
+/* close button */
+.columns-section .column-card .close-button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.columns-section .column-card .close-button:hover {
+    cursor: pointer;
+}
+
+.columns-section .column-card .close-button .lines::before,
+.columns-section .column-card .close-button .lines::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 49%;
+
+}
+
+.columns-section .column-card .close-button .lines::before {
+    transform: rotate(45deg);
+}
+
+.columns-section .column-card .close-button .lines::after {
+    transform: rotate(135deg);
+}
+
+
+/* single column form */
+.column-card .single-column-selection .volume-selection-section.selector-div,
+.column-card .single-column-selection .bedh-selection-section.selector-div {
+    flex-direction: column;
+}
+
+.column-card .single-column-selection .volume-selection-section.selector-div input[type="number"],
+.column-card .single-column-selection .bedh-selection-section.selector-div input[type="number"] {
+    margin: 0.5rem 0;
+}
+
+
+/* label divs */
+.column-card .single-column-selection .selection-section .label-input {
+    width: 80%;
+    max-width: 600px;
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+
+
+/* Media queries */
+
+
+@media only screen and (max-width: 550px) {
+
+    /* Calc section */
+    .mode-selection .selection-section .volume-selection-section.selector-div,
+    .mode-selection .selection-section .bedh-selection-section.selector-div {
+        flex-direction: column;
+    }
+
+    .mode-selection .selection-section .volume-selection-section.selector-div input[type="number"],
+    .mode-selection .selection-section .bedh-selection-section.selector-div input[type="number"] {
+        margin: 0.5rem 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .columns-section .column-card.expanded {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        min-width: 90vw;
+    }
+
+    .column-card .single-column-selection .selection-section .label-input {
+        width: 90%;
+        /* max-width: 600px; */
+    }
+}
