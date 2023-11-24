@@ -219,7 +219,7 @@ h2 {
 /* add expanded class to your specific column card */
 .columns-section .column-card.expanded {
 
-    max-height: 85vh;
+    max-height: 95vh;
     min-width: 60vw;
 
 
@@ -230,7 +230,7 @@ h2 {
     scrollbar-width: none;
     /* Firefox */
     margin: 0 auto;
-    padding-bottom: 500px;
+
 
     visibility: visible;
     position: fixed;
@@ -393,5 +393,10 @@ h2 {
     .column-card .single-column-selection .selection-section .label-input {
         width: 90%;
         /* max-width: 600px; */
+    }
+
+    /* single card extra padding */
+    .columns-section .column-card.expanded {
+        padding-bottom: 500px;
     }
 }
