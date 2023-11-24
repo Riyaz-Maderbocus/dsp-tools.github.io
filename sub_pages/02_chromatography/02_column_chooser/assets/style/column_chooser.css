@@ -396,7 +396,7 @@ h2 {
     }
 
     /* single card extra padding */
-    /* .columns-section .column-card.expanded {
-        padding-bottom: 200px;
-    } */
+    .columns-section .column-card.expanded {
+        padding-bottom: 100px;
+    }
 }
