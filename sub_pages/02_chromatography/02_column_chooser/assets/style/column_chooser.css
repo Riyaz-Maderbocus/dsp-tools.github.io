@@ -218,24 +218,20 @@ h2 {
 
 /* add expanded class to your specific column card */
 .columns-section .column-card.expanded {
-    /* display: block; */
-    /* opacity: 1; */
-    /* position: absolute; */
-    /* top: 0vh; */
-    /* left: 50%; */
-    z-index: 5;
-    max-height: 150vh;
+
+    max-height: 85vh;
     min-width: 60vw;
+
+
     overflow-y: scroll;
+    overflow: auto;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
     margin: 0 auto;
-    /* width: 600px; */
-    /* max-width: 600px; */
-    /* height: 50vh; */
-    /* min-height: 20vh; */
+    padding-bottom: 500px;
+
     visibility: visible;
     position: fixed;
     top: 0;
@@ -246,6 +242,10 @@ h2 {
     flex-direction: column; */
 
 }
+
+/* .columns-section .column-card.expanded>* {
+    overflow: scroll;
+} */
 
 /* space out single radio button */
 .column-card.expanded .single-radio-button {
