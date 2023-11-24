@@ -224,7 +224,7 @@ h2 {
     /* top: 0vh; */
     /* left: 50%; */
     z-index: 5;
-    max-height: 100vh;
+    max-height: 150vh;
     min-width: 60vw;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -305,6 +305,7 @@ h2 {
     position: absolute;
     top: 5px;
     right: 10px;
+    display: none;
 }
 
 .columns-section .column-card .close-button:hover {
@@ -333,6 +334,10 @@ h2 {
     transform: rotate(135deg);
 }
 
+
+.columns-section .column-card.expanded .close-button {
+    display: block;
+}
 
 /* single column form */
 .column-card .single-column-selection .volume-selection-section.selector-div,
