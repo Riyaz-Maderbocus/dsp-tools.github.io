@@ -139,7 +139,7 @@ function calculate2(c1, v1, c2, c3) {
 
 function createText2(resultsArray) {
     let p1 = document.createElement("p");
-    p1.innerHTML = `You will need <span class="answer_span">${resultsArray[0]} L</span> or <span class="answer_span">${(resultsArray[0] *1000).toFixed(4)} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} solution to add to ${resultsArray[3].num} ${resultsArray[3].units} of ${resultsArray[2].num} ${resultsArray[2].units} starting concentration`
+    p1.innerHTML = `You will need <span class="answer_span">${resultsArray[0]} L</span> or <span class="answer_span">${(resultsArray[0] *1000).toFixed(4)} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} concentrated stock solution to add to ${resultsArray[3].num} ${resultsArray[3].units} of ${resultsArray[2].num} ${resultsArray[2].units} starting concentration`
     answerSection.appendChild(p1);
 
     let p2 = document.createElement("p");
