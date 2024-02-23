@@ -22,14 +22,18 @@
 
             </div>
             <div class="form-card">
-                <form action="#" id="form" autocomplete="off">
+                <!-- <form action="#" id="form" autocomplete="off"> -->
 
-                    <div class="form-block">
-                        <label for="c1">What is the concentration of your starting solution? C1</label>
-                        <div class="input-block">
-                            <p>Conc</p>
-                            <input type="text" id="c1" name="c1">
-                            <p>Units</p>
+                <div class="form-block">
+                    <label for="c1">What is the concentration of your starting solution? C1</label>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label for="c1" class="inline-label">Conc</label>
+                            <input type="number" id="c1" name="c1" autocomplete="off">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="c1units" class="inline-label">Units</label>
+
                             <select name="c1units" id="c1units">
                                 <!-- <option value="" disabled selected hidden>Choose units</option> -->
                                 <option value="M" selected>M</option>
@@ -39,13 +43,17 @@
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-block">
-                        <label for="v1">What is the volume of your starting solution? V1</label>
-                        <div class="input-block">
-                            <p>Vol</p>
-                            <input type="text" id="v1" name="v1">
-                            <p>Units</p>
+                <div class="form-block">
+                    <label for="v1">What is the volume of your starting solution? V1</label>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label for="v1" class="inline-label">Vol</label>
+                            <input type="number" id="v1" name="v1" autocomplete="off">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="v1units" class="inline-label">Units</label>
                             <select name="v1units" id="v1units">
                                 <!-- <option value="" disabled selected hidden>Choose units</option> -->
                                 <option value="L" selected>L</option>
@@ -55,13 +63,17 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-block">
-                        <label for="c2">What is the concentration of your second (more concentrated) solution?
-                            C2</label>
-                        <div class="input-block">
-                            <p>Conc</p>
-                            <input type="text" id="c2" name="c2">
-                            <p>Units</p>
+                </div>
+                <div class="form-block">
+                    <label for="c2">What is the concentration of your second (more concentrated) solution?
+                        C2</label>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label for="c2" class="inline-label">Conc</label>
+                            <input type="number" id="c2" name="c2" autocomplete="off">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="c2units" class="inline-label">Units</label>
                             <select name="c2units" id="c2units">
                                 <!-- <option value="" disabled selected hidden>Choose units</option> -->
                                 <option value="M" selected>M</option>
@@ -71,14 +83,18 @@
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-block">
-                        <label for="c3">What is the final concentration you need? C3</label>
+                <div class="form-block">
+                    <label for="c3">What is the final concentration you need? C3</label>
 
-                        <div class="input-block">
-                            <p>Conc</p>
-                            <input type="text" id="c3" name="c3">
-                            <p>Units</p>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label class="inline-label"="c3">Conc</label>
+                            <input type="number" id="c3" name="c3" autocomplete="off">
+                        </div>
+                        <div class="input-block-item">
+                            <label class="inline-label"="c3units">Units</label>
                             <select name="c3units" id="c3units">
                                 <!-- <option value="" disabled selected hidden>Choose units</option> -->
                                 <option value="M" selected>M</option>
@@ -88,13 +104,14 @@
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="button-block">
-                        <button type="submit" id="calculate" name="calculate">Calculate</button>
-                        <!-- <button id="reset" name="reset">Reset</button> -->
-                        <button type="reset" id="reset" name="reset">Reset</button>
-                    </div>
-                </form>
+                <div class="button-block">
+                    <button id="calculate" name="calculate">Calculate</button>
+
+                    <button id="reset" name="reset">Reset</button>
+                </div>
+                <!-- </form> -->
 
                 <div class="answer">
 

@@ -3,6 +3,8 @@ const resetButton = document.querySelector("#reset");
 
 let answerSection = document.querySelector(".answer");
 
+let hasCalculatedAlready = false;
+
 
 let c1Data = {
     userEntry: form.elements.c1,
@@ -70,7 +72,8 @@ let allObjects = [c1Data, v1Data, c2Data, v2Data];
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     // alert("form clicked");
-
+    // v1Data.userEntry = 1;
+    // v1Data.unitEntry = "L";
     let numArray = [];
     let unitArray = [];
 
@@ -81,6 +84,7 @@ form.addEventListener("submit", function (e) {
         unitArray.push(data.units)
         numArray.push(data.num);
     }
+    // numArray[1] = 1;
 
     if (numArray.includes(NaN)) {
         alert("Ensure that only numbers are used");
@@ -173,10 +177,10 @@ function calculate(arr) {
 function createText(c1obj, v1obj, c2obj, v2obj) {
     console.log("hello");
     let p1 = document.createElement("p");
-    p1.innerHTML = `You will need <span class="answer_span">${v1obj.adjNum} L / ${v1obj.adjNum *1000} mL / ${v1obj.adjNum * 1000000} uL</span> of ${c1obj.num} ${c1obj.units} stock solution`
+    p1.innerHTML = `You will need <span class="answer_span">${(v1obj.adjNum).toFixed(3)} L / ${(v1obj.adjNum *1000).toFixed(3)} mL / ${(v1obj.adjNum * 1000000).toFixed(3)} uL</span> of ${c1obj.num} ${c1obj.units} stock solution`
     let newVolume = (v2obj.adjNum - v1obj.adjNum);
     let p2 = document.createElement("p");
-    p2.innerHTML = `Make it up using ${newVolume} L / ${newVolume *1000} mL / ${newVolume *1000000} uL of water to get to ${v2obj.adjNum} L of ${c2obj.num} ${c2obj.units} of target solution`
+    p2.innerHTML = `Make it up using ${(newVolume).toFixed(3)} L / ${(newVolume *1000).toFixed(3)} mL / ${(newVolume *1000000).toFixed(3)} uL of solvent to get to ${v2obj.adjNum} L of ${c2obj.num} ${c2obj.units} of target solution`
     answerSection.appendChild(p1);
     answerSection.appendChild(p2);
 }

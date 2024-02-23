@@ -1,3 +1,10 @@
+:root {
+    --primary: #005190;
+    --background: #fafafb;
+    --green: rgb(0, 128, 0);
+    --red: #f52509;
+}
+
 body {
     /* background-color: #add8e6; */
     font-family: 'Roboto', sans-serif;
@@ -30,16 +37,16 @@ h3 {
 
 .heading-section {
     max-width: 600px;
-    color: #005190;
+    color: var(--primary);
 }
 
 .form-card {
     margin: 2rem auto;
     max-width: 600px;
     padding: 0.75rem 1rem;
-    border: 2px solid #005190;
+    border: 2px solid var(--primary);
     border-radius: 10px;
-    background-color: #f4f4f4;
+    background-color: var(--background);
     box-sizing: border-box;
 }
 
@@ -51,32 +58,41 @@ h3 {
     align-items: center;
 }
 
-.form-block p {
+.form-block p,
+.form-block .inline-label {
     width: 50px;
 }
 
 .form-block .input-block {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    /* width: 80%; */
+    width: 80%;
     margin-top: 10px;
+}
+
+.form-block .input-block .input-block-item {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .form-block .input-block input {
     /* margin-top: 10px; */
     width: 80px;
-    border: 1px solid #005190;
+    border: 1px solid var(--primary);
     border-radius: 5px;
     height: 40px;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .form-block .input-block select {
     border: none;
     border-radius: 5px;
-    border: 1px solid #005190;
+    border: 1px solid var(--primary);
     height: 40px;
     text-align: center;
     width: 80px;
@@ -93,13 +109,14 @@ h3 {
 }
 
 .button-block button {
-    width: 100px;
+    min-width: 100px;
     height: 40px;
     border: 2px solid black;
     border-radius: 5px;
     color: #fff;
     background-color: none;
-
+    max-width: 80%;
+    padding: 0 0.5rem;
 
 }
 
@@ -109,13 +126,13 @@ h3 {
 }
 
 .button-block #calculate {
-    background-color: green;
+    background-color: var(--green);
     color: white;
     letter-spacing: 2px;
 }
 
 .button-block #reset {
-    background-color: #f52509;
+    background-color: var(--red);
     color: white;
     letter-spacing: 2px;
 }
@@ -127,7 +144,7 @@ h3 {
 .answer_span {
     font-weight: bold;
     text-decoration: underline;
-    color: green;
+    color: var(--green);
 }
 
 /* media queries */
@@ -135,5 +152,16 @@ h3 {
     .form-card {
         /* margin: 1rem 0 2rem; */
         padding: 0.75rem 10px 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .form-block .input-block {
+        flex-direction: column;
+    }
+
+    .form-block .input-block .input-block-item {
+        width: 90%;
+        margin: 0.5rem 0;
     }
 }

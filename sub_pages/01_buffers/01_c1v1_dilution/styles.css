@@ -58,6 +58,10 @@ h3 {
     justify-content: center;
 }
 
+.form-block.hidden {
+    display: none;
+}
+
 .form-block .form-block-first-label {
     display: block;
     /* color: red; */
