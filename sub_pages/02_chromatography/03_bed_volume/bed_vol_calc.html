@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bed Volume calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main class="flex-container">
+            <section id="instructions" class="heading-section">
+                <h1>Bed Volume calculator</h1>
+                <h2>Calculate the bed volume from a given column radius and height</h2>
+                <h3>Choose which two values to select and input your numbers. The calculated value will populate the
+                    empty field</h3>
+
+                <h4>The empty field is calculated from the formula: Bed Volume (mL) = bed height (cm)/ x Column
+                    cross-sectional area (cm2)</h4>
+
+                <p>As a sanity check, a column with 10 cm height and 16 mm diameter should give 20.11 mL</p>
+
+            </section>
+
+            <section id="calculator">
+                <div class="row">
+                    <div class="check_label">
+
+                        <input type="checkbox" name="bedh_check" id="bedh_check">
+                        <label for="bedh_check">Bed height (cm)</label>
+                    </div>
+                    <input type="number" name="bed_height" id="bed_height" min="0.1" step="0.1">
+                </div>
+
+                <div class="row">
+                    <div class="check_label">
+
+
+                        <input type="checkbox" name="col_check" id="col_check">
+                        <label for="col_check">Column diameter (mm)</label>
+                    </div>
+                    <input type="number" name="col_diameter" id="col_diameter" min="0.1" step="0.1">
+                </div>
+
+                <div class="row">
+                    <div class="check_label">
+
+                        <input type="checkbox" name="bedv_check" id="bedv_check">
+                        <label for="bedv_check">Bed Volume (mL)</label>
+                    </div>
+                    <input type="number" name="bed_volume" id="bed_volume" min="0.1" step="0.1">
+                </div>
+
+                <div class="row button_section">
+                    <button id="calculate">Calculate</button>
+                    <button id="reset">Reset</button>
+
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+
+</html>
