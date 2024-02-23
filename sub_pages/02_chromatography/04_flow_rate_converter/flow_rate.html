@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flow Rate Converter</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main class="flex-container">
+            <section id="instructions" class="heading-section">
+                <h1>Flow Rate Converter</h1>
+                <h2>Calculate the volumetric flow rate from a flow velocity and column diameter</h2>
+                <h3>Choose which two values to select and input your numbers. The calculated value will populate the
+                    empty field</h3>
+
+                <h4>The empty field is calculated from the formula: Volumetric flow rate (L/h) = (flow velocity (cm/h) x
+                    (column crossectional area (cm2) /1000)</h4>
+
+                <p>As a sanity check, a flow velocity of 150 cm/h in a 16 mm diameter column will give a Volumetric flow
+                    rate of 0.302 L/h</p>
+
+            </section>
+
+            <section id="main-converter" class="calculator">
+                <div class="row">
+                    <div class="check_label">
+
+                        <input type="checkbox" name="flowv_check" id="flowv_check">
+                        <label for="flowv_check">Flow velocity (cm/h)</label>
+                    </div>
+                    <input type="number" name="flow_velocity" id="flow_velocity" min="0.1" step="0.1">
+                </div>
+
+                <div class="row">
+                    <div class="check_label">
+
+
+                        <input type="checkbox" name="col_check" id="col_check">
+                        <label for="col_check">Column diameter (mm)</label>
+                    </div>
+                    <input type="number" name="col_diameter" id="col_diameter" min="0.1" step="0.1">
+                </div>
+
+                <div class="row">
+                    <div class="check_label">
+
+                        <input type="checkbox" name="volflow_check" id="volflow_check">
+                        <label for="volflow_check">Volumetric flow rate (L/h)</label>
+                    </div>
+                    <input type="number" name="vol_flow" id="vol_flow" min="0.1" step="0.01">
+                </div>
+
+                <div class="row button_section">
+                    <button id="calculate" class="green-button">Calculate</button>
+                    <button id="reset" class="red-button">Reset</button>
+
+                </div>
+            </section>
+
+            <section id="converter-instructions" class="heading-section">
+                <!-- <h1>Flow Rate Converter</h1> -->
+                <h2>Convert from L/h to ml/min</h2>
+                <h3>Keep one of the fields empty and press calculate. The calculated value will populate the
+                    empty field.</h3>
+
+                <h4>The empty field is calculated from the formula: L/h x 1000 / 60 = mL/min</h4>
+
+                <p>As a sanity check, 0.302 L/h is 5 mL/min</p>
+
+            </section>
+
+            <section id="second-converter" class="calculator">
+                <div class="row">
+                    <div class="check_label">
+                        <label for="LperH">L/h</label>
+                        <input type="number" name="LperH" id="LperH" min="0.1" step="0.01">
+                    </div>
+
+                    <div class="check_label">
+                        <label for="mLperMin">mL/min</label>
+                        <input type="number" name="mLperMin" id="mLperMin" min="0.1" step="0.1">
+                    </div>
+
+
+                </div>
+                <div class="row button_section">
+                    <button id="convert" class="green-button">Calculate</button>
+                    <button id="reset-convert" class="red-button">Reset</button>
+
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+
+</html>
