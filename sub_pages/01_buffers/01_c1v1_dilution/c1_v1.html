@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Modified buffer dilution calculator</title>
+        <title>Standard buffer dilution calculator</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -18,22 +18,28 @@
                 <h1>Standard dilution calculator</h1>
                 <h2>Use when you are diluting a solution that has none of your solute in it</h2>
                 <h3>Leave one of the fields blank and press calculate</h3>
-                <h4>C1 x V1 = V2 x C2</h4>
+                <h4>C1 x V1 = C2 x V2</h4>
 
             </div>
             <div class="form-card">
-                <form action="#" id="form" autocomplete="off">
 
-                    <div class="form-block">
-                        <label class="form-block-first-label" for="c1">What is the concentration of your stock solution?
-                            C1</label>
-                        <div class="input-block">
-                            <!-- <p>Conc</p> -->
+
+                <div class="form-block">
+                    <label class="form-block-first-label" for="c1">What is the concentration of your
+                        <strong>stock</strong> solution?
+                        C1</label>
+                    <div class="input-block">
+
+
+                        <div class="input-block-item">
                             <label for="c1" class="inline-label">Conc</label>
-                            <input type="number" id="c1" name="c1" step="any">
+                            <input type="number" id="c1" name="c1" step="any" autocomplete="off">
+                        </div>
+
+                        <div class="input-block-item">
                             <p>Units</p>
                             <select name="c1units" id="c1units">
-                                <!-- <option value="" disabled selected hidden>Choose units</option> -->
+
                                 <option value="M" selected>M</option>
                                 <option value="mM">mM</option>
                                 <option value="uM">uM</option>
@@ -41,36 +47,25 @@
                             </select>
                         </div>
                     </div>
-
-                    <div class="form-block">
-                        <label class="form-block-first-label" for="v1">What is the volume of your stock solution? V1
-                            (Generally unknown)</label>
-                        <div class="input-block">
-                            <label for="v1" class="inline-label">Vol </label>
-                            <!-- <p>Vol</p> -->
-                            <input type="number" id="v1" name="v1" step="any">
-                            <p>Units</p>
-                            <select name="v1units" id="v1units">
-                                <!-- <option value="" disabled selected hidden>Choose units</option> -->
-                                <option value="L" selected>L</option>
-                                <option value="mL">mL</option>
-                                <option value="uL">uL</option>
+                </div>
 
 
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-block">
-                        <label class="form-block-first-label" for="c2">What is the concentration of your target
-                            solution?
-                            C2</label>
-                        <div class="input-block">
-                            <!-- <p>Conc</p> -->
+                <div class="form-block">
+                    <label class="form-block-first-label" for="c2">What is the concentration of your
+                        <strong>target</strong>
+                        solution?
+                        C2</label>
+                    <div class="input-block">
+
+                        <div class="input-block-item">
                             <label for="c2" class="inline-label">Conc</label>
-                            <input type="number" id="c2" name="c2" step="any">
+                            <input type="number" id="c2" name="c2" step="any" autocomplete="off">
+                        </div>
+
+                        <div class="input-block-item">
                             <p>Units</p>
                             <select name="c2units" id="c2units">
-                                <!-- <option value="" disabled selected hidden>Choose units</option> -->
+
                                 <option value="M" selected>M</option>
                                 <option value="mM">mM</option>
                                 <option value="uM">uM</option>
@@ -78,17 +73,21 @@
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="form-block">
-                        <label class="form-block-first-label" for="v2">What is the volume of your target? V2</label>
+                <div class="form-block">
+                    <label class="form-block-first-label" for="v2">What is the volume of your target? V2</label>
 
-                        <div class="input-block">
-                            <!-- <p>Vol</p> -->
+                    <div class="input-block">
+
+                        <div class="input-block-item">
                             <label for="v2" class="inline-label">Vol</label>
-                            <input type="number" id="v2" name="v2" step="any">
+                            <input type="number" id="v2" name="v2" step="any" autocomplete="off">
+                        </div>
+                        <div class="input-block-item">
                             <p>Units</p>
                             <select name="v2units" id="v2units">
-                                <!-- <option value="" disabled selected hidden>Choose units</option> -->
+
                                 <option value="L" selected>L</option>
                                 <option value="mL">mL</option>
                                 <option value="uL">uL</option>
@@ -96,20 +95,21 @@
                             </select>
                         </div>
                     </div>
+                </div>
 
-                    <div class="button-block">
-                        <button type="submit" id="calculate" name="calculate">Calculate</button>
-                        <!-- <button id="reset" name="reset">Reset</button> -->
-                        <button type="reset" id="reset" name="reset">Reset</button>
-                    </div>
-                </form>
+                <div class="button-block">
+                    <button id="calculate" name="calculate">Calculate</button>
+
+                    <button id="reset" name="reset">Reset</button>
+                </div>
+
 
                 <div class="answer">
 
                 </div>
             </div>
         </main>
-        <script src="c1.js"></script>
+        <script src="c1v1.js"></script>
     </body>
 
 </html>
