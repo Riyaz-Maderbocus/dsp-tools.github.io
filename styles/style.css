@@ -27,28 +27,77 @@ a {
 
 .nav {
     /* border: 1px solid black; */
-    padding: 0 16px;
+    padding: 16px;
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-.nav a {
-    padding: 1em;
+.nav .nav-links a,
+.mobile-nav a {
+    padding: 0 1em;
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.nav a:hover {
+.nav .nav-links a:hover,
+.mobile-nav .nav-links a:hover {
     background-color: var(--background-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+/* mobile nav */
+.mobile-nav {
+    width: 70%;
+    display: none;
+    margin: 0 auto;
+
+}
+
+.mobile-nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mobile-nav .nav-links a {
+    display: inline-block;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+
+}
+
+/* hamburger section */
+
+.nav .hamburger {
+    height: 50px;
+    width: 50px;
+    display: none;
+    margin-top: 16px;
+}
+
+.nav .hamburger:hover {
+    cursor: pointer;
+}
+
+.nav .hamburger .bar {
+    background-color: var(--primary-color);
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
 }
 
 /* main section */
 
 .main {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
 .main .main-header {
@@ -93,7 +142,7 @@ a {
 
 /* cards styling */
 .topic-section .cards-container {
-    max-width: 95%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -171,6 +220,23 @@ a {
         padding: 0.5rem 0.1rem;
     }
 
+
+    /* navbar and hamburger */
+    .nav .nav-links {
+        display: none;
+    }
+
+    .nav .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+
     .topic-section .cards-container {
         width: 100%;
         margin: 0 auto;
@@ -191,4 +257,57 @@ a {
     }
 
 
+}
+
+/* keyframe ainimations */
+
+.animateBar1 {
+    animation: moveBar1 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+    animation: fadeBar2 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+    animation: moveBar3 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeBar2 {
+    from {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes moveBar1 {
+    from {
+        transform: rotate(0);
+
+    }
+
+    to {
+        transform: rotate(45deg) translate(4px, 10px);
+
+    }
+}
+
+@keyframes moveBar3 {
+    from {
+        transform: rotate(0);
+
+    }
+
+    to {
+        transform: rotate(-45deg) translate(4px, -10px);
+
+    }
 }
