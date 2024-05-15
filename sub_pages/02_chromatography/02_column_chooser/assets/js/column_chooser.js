@@ -526,7 +526,7 @@ let colorText = (column) => {
     // card formatting
 
 
-    if (volSpan.classList.contains("red-text") || heightSpan.classList.contains("red-text")) {
+    if (volSpan.classList.contains("red-text") && heightSpan.classList.contains("red-text")) {
         card.classList.add("greyed-out");
     }
 
