@@ -38,7 +38,7 @@ a {
 
 .nav .nav-links a,
 .mobile-nav a {
-    padding: 0 1em;
+    padding: 0 1rem 0.5rem;
     font-weight: bold;
     color: var(--primary-color);
 }
