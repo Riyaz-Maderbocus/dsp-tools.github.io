@@ -222,9 +222,16 @@ a {
 
 
     /* navbar and hamburger */
+
+    .nav {
+        justify-content: flex-end;
+    }
+
     .nav .nav-links {
         display: none;
     }
+
+
 
     .nav .hamburger {
         display: flex;
