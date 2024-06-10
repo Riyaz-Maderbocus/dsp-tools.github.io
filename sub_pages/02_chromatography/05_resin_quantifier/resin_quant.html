@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Concentration from mass cacluator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resin_quant.css">
+    </head>
+
+    <body>
+
+        <main class="flex-container">
+            <div class="heading-section">
+                <h1>Work out how much resin you will need for a chromatography experiment</h1>
+                <!-- <h2>The first box will work out how much resin is needed to capture a fixed amount of target</h2>
+                <h2>The second box will work out how much resin is needed to pack your column</h2> -->
+                <h3>Please fill out all inputs and units before calculating</h3>
+                <!-- <h4>(C1 x V1) + (V2 x C2) = C3 x (V1 + V2)</h4> -->
+
+            </div>
+            <div class="form-card">
+
+                <h4>Use this tool to work out how much resin you need to capture a fixed amount of target</h4>
+                <!-- 2 component form -->
+                <!-- <div class="form-block">
+                    <label for="target">What quantity of target are you capturing?</label>
+                    <div class="input-block">
+                        <div class="input-block-item-full">
+                            <label for="target" class="inline-label">Target (mg)</label>
+                            <input type="number" id="target" name="target" autocomplete="off">
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <!-- 3 form for untis -->
+                <div class="form-block">
+                    <label for="target">What quantity of target are you capturing?</label>
+                    <div class="input-block">
+                        <div class="input-block-item single-input">
+                            <label for="target" class="inline-label">Value</label>
+                            <input type="number" id="target" name="target" autocomplete="off" step="any">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="target-units" class="inline-label">Units</label>
+                            <select name="target-units" id="target-units">
+
+                                <option value="ug">ug</option>
+                                <option value="mg" selected>mg</option>
+                                <option value="g">g</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="form-block">
+                    <label for="capacity">What is the binding capacity of your resin?</label>
+                    <div class="input-block">
+                        <div class="input-block-item-full">
+                            <label for="capacity" class="inline-label">Capacity (mg/ml)</label>
+                            <input type="number" id="capacity" name="capacity" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-block">
+                    <button id="calculate-1" name="calculate-1" class="calculate-button">Calculate</button>
+
+                    <button id="reset-1" name="reset-1" class="reset-button">Reset</button>
+                </div>
+
+
+                <div class="answer" id="answer-1">
+
+                </div>
+
+            </div>
+
+
+            <!-- box 2 -->
+
+            <div class="form-card">
+                <h4>Use this tool how much resin you will need to pack your column</h4>
+
+                <!-- 3 form for untis -->
+                <div class="form-block">
+                    <label for="req-vol">What is the required volume of resin you need?</label>
+                    <div class="input-block">
+                        <div class="input-block-item single-input">
+                            <label for="req-vol" class="inline-label">Value</label>
+                            <input type="number" id="req-vol" name="req-vol" autocomplete="off" step="any">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="req-vol-units" class="inline-label">Units</label>
+                            <select name="req-units" id="req-vol-units">
+
+                                <option value="uL">uL</option>
+                                <option value="mL" selected>mL</option>
+                                <option value="L">L</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="form-block">
+                    <label for="req-vol">What is the required volume of resin you need?</label>
+                    <div class="input-block">
+                        <div class="input-block-item-full">
+                            <label for="req-vol" class="inline-label">Required vol (ml)</label>
+                            <input type="number" id="req-vol" name="req-vol" autocomplete="off">
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="form-block">
+                    <label for="slurry-conc">What is the percentage of your resin slurry?</label>
+                    <div class="input-block">
+                        <div class="input-block-item-full">
+                            <label for="slurry-conc" class="inline-label">Slurry concentration (%)</label>
+                            <input type="number" id="slurry-conc" name="slurry-conc" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-block">
+                    <label for="comp-factor">What is the compression factor of your resin (default is 1.15)</label>
+                    <div class="input-block">
+                        <div class="input-block-item-full">
+                            <label for="comp-factor" class="inline-label">Compression factor</label>
+                            <input type="number" id="comp-factor" name="comp-factor" autocomplete="off" value="1.15"
+                                step="0.01">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 4 component form -->
+                <!-- <div class="form-block">
+                    <label for="c1">What concentration do you want to make your buffer?</label>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label for="c1" class="inline-label">Conc</label>
+                            <input type="number" id="c1" name="c1" autocomplete="off" step="any">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="c1units" class="inline-label">Units</label>
+                            <select name="c1units" id="c1units">
+
+                                <option value="M" selected>M</option>
+                                <option value="mM">mM</option>
+                                <option value="uM">uM</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 
+                <div class="form-block">
+                    <label for="v1">What is the volume of your buffer?</label>
+                    <div class="input-block">
+                        <div class="input-block-item">
+                            <label for="v1" class="inline-label">Vol</label>
+                            <input type="number" id="v1" name="v1" autocomplete="off" step="any">
+                        </div>
+                        <div class="input-block-item">
+                            <label for="v1units" class="inline-label">Units</label>
+                            <select name="v1units" id="v1units">
+
+                                <option value="L" selected>L</option>
+                                <option value="mL">mL</option>
+                                <option value="uL">uL</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="button-block">
+                    <button id="calculate-2" name="calculate-2" class="calculate-button">Calculate</button>
+
+                    <button id="reset-2" name="reset-2" class="reset-button">Reset</button>
+                </div>
+
+
+                <div class="answer" id="answer-2">
+
+                </div>
+            </div>
+        </main>
+        <script src="resin_quant.js"></script>
+    </body>
+
+</html>
