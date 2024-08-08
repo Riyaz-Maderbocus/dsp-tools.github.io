@@ -173,7 +173,7 @@ const createAnswer = function () {
     answerSection.appendChild(p1);
 
     let p2 = document.createElement("p");
-    p2.innerHTML = `For 1 mL of ${c1Data.num} ${c1Data.units} concentration, add <span class="answer_span">${answers.ratio} mL</span> of ${c3Data.num} ${c3Data.units} concentration solution`
+    p2.innerHTML = `For 1 mL of ${c1Data.num} ${c1Data.units} concentration, add <span class="answer_span">${answers.ratio} mL</span> of ${c2Data.num} ${c2Data.units} concentration solution`
     answerSection.appendChild(p2);
 }
 
@@ -183,12 +183,12 @@ function removeAnswer() {
     answerSection.innerHTML = "";
 }
 
-function createText2(resultsArray) {
-    let p1 = document.createElement("p");
-    p1.innerHTML = `You will need <span class="answer_span">${resultsArray[0]} L</span> or <span class="answer_span">${(resultsArray[0] *1000).toFixed(4)} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} concentrated stock solution to add to ${resultsArray[3].num} ${resultsArray[3].units} of ${resultsArray[2].num} ${resultsArray[2].units} starting concentration`
-    answerSection.appendChild(p1);
+// function createText2(resultsArray) {
+//     let p1 = document.createElement("p");
+//     p1.innerHTML = `You will need <span class="answer_span">${resultsArray[0]} L</span> or <span class="answer_span">${(resultsArray[0] *1000).toFixed(4)} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} concentrated stock solution to add to ${resultsArray[3].num} ${resultsArray[3].units} of ${resultsArray[2].num} ${resultsArray[2].units} starting concentration`
+//     answerSection.appendChild(p1);
 
-    let p2 = document.createElement("p");
-    p2.innerHTML = `For 1 mL of ${resultsArray[2].num} ${resultsArray[2].units} concentration, add <span class="answer_span">${resultsArray[1]} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} concentration solution`
-    answerSection.appendChild(p2);
-}
+//     let p2 = document.createElement("p");
+//     p2.innerHTML = `For 1 mL of ${resultsArray[2].num} ${resultsArray[2].units} concentration, add <span class="answer_span">${resultsArray[1]} mL</span> of ${resultsArray[4].num} ${resultsArray[4].units} concentration solution`
+//     answerSection.appendChild(p2);
+// }
