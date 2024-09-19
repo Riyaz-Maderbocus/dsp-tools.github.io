@@ -78,16 +78,23 @@ calculateButton.addEventListener("click", function () {
         alert("Please ensure that the number fields are filled and are not 0")
     } else {
         // alert("Working route")
-        adjustNumbers()
-        if (!checkValidConc()) {
-            alert("Ensure that the stock concentration (C2) is greater than the other two concentration values.")
-        } else {
-            removeAnswer()
-            calcuateRatioAndVolume();
-            console.log("*******answers******");
-            console.log(answers);
-            createAnswer();
-        }
+        adjustNumbers();
+        removeAnswer()
+        calcuateRatioAndVolume();
+        // console.log("*******answers******");
+        // console.log(answers);
+        createAnswer();
+
+        //Valid conc check;
+        // if (!checkValidConc()) {
+        //     alert("Ensure that the stock concentration (C2) is greater than the other two concentration values.")
+        // } else {
+        //     removeAnswer()
+        //     calcuateRatioAndVolume();
+        //     console.log("*******answers******");
+        //     console.log(answers);
+        //     createAnswer();
+        // }
     }
 
     // console.log(allObjects);
