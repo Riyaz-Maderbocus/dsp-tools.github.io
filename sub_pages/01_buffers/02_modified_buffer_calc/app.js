@@ -74,30 +74,40 @@ calculateButton.addEventListener("click", function () {
     resetData()
     updateCalcValues();
 
-    if (!checkValidNumbers()) {
-        alert("Please ensure that the number fields are filled and are not 0")
-    } else {
-        // alert("Working route")
-        adjustNumbers();
-        removeAnswer()
-        calcuateRatioAndVolume();
-        // console.log("*******answers******");
-        // console.log(answers);
-        createAnswer();
 
-        //Valid conc check;
-        // if (!checkValidConc()) {
-        //     alert("Ensure that the stock concentration (C2) is greater than the other two concentration values.")
-        // } else {
-        //     removeAnswer()
-        //     calcuateRatioAndVolume();
-        //     console.log("*******answers******");
-        //     console.log(answers);
-        //     createAnswer();
-        // }
-    }
+    // Update to use fill with 0 and not check numbers.
 
-    // console.log(allObjects);
+    fillNullWithZero();
+    adjustNumbers();
+    removeAnswer();
+    calcuateRatioAndVolume();
+    createAnswer();
+
+
+    // Removed this code in Oct24, it checked for zeros
+    // if (!checkValidNumbers()) {
+    //     alert("Please ensure that the number fields are filled and are not 0")
+    // } else {
+    //     // alert("Working route")
+    //     adjustNumbers();
+    //     removeAnswer()
+    //     calcuateRatioAndVolume();
+    //     // console.log("*******answers******");
+    //     // console.log(answers);
+    //     createAnswer();
+
+    //     //Valid conc check removed in Sept 2024;
+    //     if (!checkValidConc()) {
+    //         alert("Ensure that the stock concentration (C2) is greater than the other two concentration values.")
+    //     } else {
+    //         removeAnswer()
+    //         calcuateRatioAndVolume();
+    //         console.log("*******answers******");
+    //         console.log(answers);
+    //         createAnswer();
+    //     }
+    // }
+
 
 })
 
@@ -115,13 +125,26 @@ const updateCalcValues = function () {
 }
 
 // check to see if nums are not falsy
-const checkValidNumbers = function () {
+// update this to only check to see if the entry has been filled. Doesn't care about it being 0
+// const checkValidNumbers = function () {
+//     for (let item of allObjects) {
+//         if (!item.num || item.num === 0) {
+
+//             item.num = 0;
+//             // return false
+//         }
+//     }
+//     return true
+// }
+
+const fillNullWithZero = function () {
     for (let item of allObjects) {
-        if (!item.num || item.num === 0) {
-            return false
+        if (!item.num) {
+            item.userEntry.value = 0;
+            item.num = 0;
+
         }
     }
-    return true
 }
 
 // make adjusted numbers for each calcobject
